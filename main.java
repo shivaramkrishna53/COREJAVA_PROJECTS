@@ -1,25 +1,61 @@
+package banking;
 
 public class main {
 
-	public room r;
-	public bathroom b;
-	public ac a;
-	public main(room r,bathroom b,ac a)
-	{
-		this.r=r;
-		this.a=a;
-		this.b=b;
-	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		room r=new room(1,2,3);
-		bathroom b=new bathroom(100,100,20);
+		bank b=new bank("axisbank");
+		if(b.addnewbranch("begumpet"))
+			System.out.println("Begumpet branch successfully added");
+		else
+			System.out.println("Begumpet branch is not added");
+		if(b.addnewcustomer("begumpet", "shiva",50000))
+			System.out.println("shiva added");
+		else
+			System.out.println("not added");
+		if(b.addnewcustomer("madhapur", "govind",100000))
+System.out.println("sai added");
+		else
+			System.out.println("not added");
 		
-		main m=new main(r,b,new ac(1,3000000,"tata"));
-		m.r.setCeiling(100);
-		System.out.println(m.r.getCeiling());
-		m.a.setName("Amazon");
-		System.out.println(m.a.getName());
+		
+		bank bank = new bank("National Australia Bank");
+
+        if(bank.addnewbranch("Adelaide")) {
+            System.out.println("Adelaide branch created");
+        }
+
+        bank.addnewcustomer("Adelaide", "Tim", 50.05);
+        bank.addnewcustomer("Adelaide", "Mike", 175.34);
+        bank.addnewcustomer("Adelaide", "Percy", 220.12);
+
+        bank.addnewbranch("Sydney");
+        bank.addnewcustomer("Sydney", "Bob", 150.54);
+
+        
+
+        if(!bank.addnewcustomer("Melbourne", "Brian", 5.53)) {
+            System.out.println("Error Melbourne branch does not exist");
+        }
+
+        if(!bank.addnewbranch("Adelaide")) {
+            System.out.println("Adelaide branch already exists");
+        }
+
+       
+        if(!bank.addnewcustomer("Adelaide", "Tim", 12.21)) {
+            System.out.println("Customer Tim already exists");
+        }
+
+
+        if(!bank.addnewcustomer("Adelaide", "Fergus", 52.33)) {
+            System.out.println("Customer does not exist at branch");
+
+
+
+
+        }
+
 
 	}
 
