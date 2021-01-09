@@ -1,4 +1,4 @@
-package crashreportproject;
+package selinium;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 //comment the above line and uncomment below line to use Chrome
 //import org.openqa.selenium.chrome.ChromeDriver;
-public class CrashReport {
+public class crashreport {
 
 
     public static void main(String[] args) throws InterruptedException {
@@ -18,8 +18,8 @@ public class CrashReport {
     	
     	ArrayList<WebElement> searchresults=new ArrayList<WebElement>();
 	    ArrayList<Object>alllinktext=new ArrayList<>();
-    	//D:\shivajavafullstack\selenium\chromedriver_win32\chromedriver.exe
-		System.setProperty("webdriver.chrome.driver","D:\\shivajavafullstack\\selenium\\chromedriver_win32\\chromedriver.exe");
+    	
+		System.setProperty("webdriver.chrome.driver","D:\\javafullstack\\selenium\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
         String baseUrl = "https://avocado/reports/304730";
