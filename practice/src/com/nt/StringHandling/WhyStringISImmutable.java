@@ -14,9 +14,17 @@ public class WhyStringISImmutable {
 		System.out.println(s2.hashCode());
 		System.out.println(s3.hashCode());
 		String s4=new String("shiva");
-		s4.concat("ram");
+//		s4.concat("ram");
 		System.out.println(s4);
 		System.out.println(s4.hashCode());
+		System.out.println(System.identityHashCode(s4));
+		System.out.println(System.identityHashCode(s2));
+		System.out.println(System.identityHashCode(s3));
+		
+		if(s2==s3)
+			System.out.println("yes 1");
+		if(s4==s2)
+			System.out.println("yes 2");
 	}
 	
 	
